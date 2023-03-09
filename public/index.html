@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<title>CRUD Operations</title>
+	</head>
+	<body>
+		<h3>Cars for Sale Database</h3>
+		<div>
+			<p>Show All Cars.</p>
+			<form method="post" action="/showAll">
+				<p><input type="submit" value="Display All Items" /></p>
+			</form>
+			<hr />
+		</div>
+		<div>
+			<p>Add New Car to cars4sale DB</p>
+			<form method="post" action="/addCar">
+				<p><input type="text" name="cid" /> Car ID</p>
+				<p><input type="text" name="year" /> year</p>
+				<p><input type="text" name="make" /> Make</p>
+				<p><input type="text" name="model" /> Model</p>
+				<p><input type="text" name="miles" /> Miles</p>
+				<p><input type="text" name="price" /> Asking Price</p>
+				<p><input type="text" name="dealer_id" /> Dealer ID (string)</p>
+				<p><input type="submit" value="Add New Item" /></p>
+			</form>
+			<hr />
+		</div>
+		<div>
+			<p>Find a car by its CID.</p>
+			<form method="post" action="/findCar">
+				<p><input type="text" name="cid" /> Car ID number</p>
+				<p><input type="submit" value="Find Item" /></p>
+			</form>
+			<hr />
+		</div>
+		<div>
+			<p>Edit Both the Car's Miles and Price</p>
+			<form method="post" action="/updateCar">
+				<p><input type="text" name="cid" /> Car ID</p>
+				<p><input type="text" name="miles" /> Miles</p>
+				<p><input type="text" name="price" /> Price</p>
+				<p><input type="submit" value="Edit Item Data" /></p>
+			</form>
+			<hr />
+		</div>
+		<div>
+			<p>Delete Car from DB (has been sold)</p>
+			<form method="post" action="/deleteCar">
+				<p><input type="text" name="cid" /> Car ID</p>
+				<p><input type="submit" value="Delete Item" /></p>
+			</form>
+			<hr />
+		</div>
+		<!--
+      <div>
+      <p>Add a bunch of items: do this only once.</p>
+      <form method='post' action="/addMany">
+         <p><input type="submit" value="Add Several Items"> </p>
+      </form>
+      <hr>
+      </div>
+      -->
+	</body>
+</html>
